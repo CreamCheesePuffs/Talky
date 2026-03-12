@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8664022A-59C8-4357-B81B-2BF97864DABA}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.14.2_msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.14.2_msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="jsoncpp-1.9.0\json_reader.cpp" />
+    <ClCompile Include="jsoncpp-1.9.0\json_value.cpp" />
+    <ClCompile Include="jsoncpp-1.9.0\json_writer.cpp" />
+    <ClCompile Include="tasks\main.cc" />
+    <ClCompile Include="tasks\NetWorker.cc" />
+    <ClCompile Include="tasks\TalkyClient.cc" />
+    <ClCompile Include="ui\ChatItem.cpp" />
+    <ClCompile Include="ui\Login.cpp" />
+    <ClCompile Include="ui\MainWindow.cpp" />
+    <ClCompile Include="ui\MessageBubbleWidget.cpp" />
+    <ClCompile Include="ui\Signin.cpp" />
+    <ClCompile Include="utils\EncodeUtil.cc" />
+    <ClCompile Include="utils\IULog.cc" />
+    <ClCompile Include="utils\stdafx.cc" />
+    <ClCompile Include="utils\Zlib.cc" />
+    <ClCompile Include="zlib1.2.11\adler32.c" />
+    <ClCompile Include="zlib1.2.11\compress.c" />
+    <ClCompile Include="zlib1.2.11\crc32.c" />
+    <ClCompile Include="zlib1.2.11\deflate.c" />
+    <ClCompile Include="zlib1.2.11\gzclose.c" />
+    <ClCompile Include="zlib1.2.11\gzlib.c" />
+    <ClCompile Include="zlib1.2.11\gzread.c" />
+    <ClCompile Include="zlib1.2.11\gzwrite.c" />
+    <ClCompile Include="zlib1.2.11\infback.c" />
+    <ClCompile Include="zlib1.2.11\inffast.c" />
+    <ClCompile Include="zlib1.2.11\inflate.c" />
+    <ClCompile Include="zlib1.2.11\inftrees.c" />
+    <ClCompile Include="zlib1.2.11\trees.c" />
+    <ClCompile Include="zlib1.2.11\uncompr.c" />
+    <ClCompile Include="zlib1.2.11\zlibdemo.c" />
+    <ClCompile Include="zlib1.2.11\zutil.c" />
+    <QtRcc Include="TalkyClient.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ui\ChatItem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ui\Login.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ui\MainWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ui\MessageBubbleWidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ui\Signin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="resource\ChatItem.ui" />
+    <QtUic Include="resource\Login.ui" />
+    <QtUic Include="resource\MainWindow.ui" />
+    <QtUic Include="resource\Signin.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jsoncpp-1.9.0\allocator.h" />
+    <ClInclude Include="jsoncpp-1.9.0\assertions.h" />
+    <ClInclude Include="jsoncpp-1.9.0\autolink.h" />
+    <ClInclude Include="jsoncpp-1.9.0\config.h" />
+    <ClInclude Include="jsoncpp-1.9.0\features.h" />
+    <ClInclude Include="jsoncpp-1.9.0\forwards.h" />
+    <ClInclude Include="jsoncpp-1.9.0\json.h" />
+    <ClInclude Include="jsoncpp-1.9.0\json_tool.h" />
+    <ClInclude Include="jsoncpp-1.9.0\reader.h" />
+    <ClInclude Include="jsoncpp-1.9.0\value.h" />
+    <ClInclude Include="jsoncpp-1.9.0\version.h" />
+    <ClInclude Include="jsoncpp-1.9.0\writer.h" />
+    <ClInclude Include="tasks\Msg.h" />
+    <ClInclude Include="tasks\NetWorker.h" />
+    <QtMoc Include="tasks\TalkyClient.h" />
+    <ClInclude Include="utils\EncodeUtil.h" />
+    <ClInclude Include="utils\IULog.h" />
+    <ClInclude Include="utils\stdafx.h" />
+    <ClInclude Include="utils\Zlib.h" />
+    <ClInclude Include="zlib1.2.11\crc32.h" />
+    <ClInclude Include="zlib1.2.11\deflate.h" />
+    <ClInclude Include="zlib1.2.11\gzguts.h" />
+    <ClInclude Include="zlib1.2.11\inffast.h" />
+    <ClInclude Include="zlib1.2.11\inffixed.h" />
+    <ClInclude Include="zlib1.2.11\inflate.h" />
+    <ClInclude Include="zlib1.2.11\inftrees.h" />
+    <ClInclude Include="zlib1.2.11\trees.h" />
+    <ClInclude Include="zlib1.2.11\zconf.h" />
+    <ClInclude Include="zlib1.2.11\zlib.h" />
+    <ClInclude Include="zlib1.2.11\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jsoncpp-1.9.0\json_valueiterator.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="zlib1.2.11\文件概览.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

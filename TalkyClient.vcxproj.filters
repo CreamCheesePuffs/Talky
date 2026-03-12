@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{2ec27985-6a2c-4887-a445-60200fbf5494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tasks">
+      <UniqueIdentifier>{0c0597b9-e52c-4652-a322-ccc33c394909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jsoncpp-1.9.0">
+      <UniqueIdentifier>{cbb7793f-19e3-4ea7-902a-11b4df6a6379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zlib1.2.11">
+      <UniqueIdentifier>{acf18821-e659-4f00-aa8f-434a5863a178}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{e9eab3d3-0a49-408d-bebb-7465678ab5bd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="TalkyClient.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ui\ChatItem.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\Login.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\MainWindow.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\MessageBubbleWidget.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\Signin.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp-1.9.0\json_reader.cpp">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp-1.9.0\json_value.cpp">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp-1.9.0\json_writer.cpp">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\adler32.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\compress.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\crc32.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\deflate.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\gzclose.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\gzlib.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\gzread.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\gzwrite.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\infback.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\inffast.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\inflate.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\inftrees.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\trees.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\uncompr.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\zlibdemo.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib1.2.11\zutil.c">
+      <Filter>zlib1.2.11</Filter>
+    </ClCompile>
+    <ClCompile Include="tasks\NetWorker.cc">
+      <Filter>tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="tasks\TalkyClient.cc">
+      <Filter>tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\EncodeUtil.cc">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\IULog.cc">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\stdafx.cc">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Zlib.cc">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="tasks\main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ui\ChatItem.h">
+      <Filter>ui</Filter>
+    </QtMoc>
+    <QtMoc Include="ui\Login.h">
+      <Filter>ui</Filter>
+    </QtMoc>
+    <QtMoc Include="ui\MainWindow.h">
+      <Filter>ui</Filter>
+    </QtMoc>
+    <QtMoc Include="ui\MessageBubbleWidget.h">
+      <Filter>ui</Filter>
+    </QtMoc>
+    <QtMoc Include="ui\Signin.h">
+      <Filter>ui</Filter>
+    </QtMoc>
+    <QtMoc Include="tasks\TalkyClient.h">
+      <Filter>tasks</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="resource\ChatItem.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="resource\Login.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="resource\MainWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="resource\Signin.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jsoncpp-1.9.0\allocator.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-1.9.0\assertions.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-1.9.0\autolink.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-1.9.0\config.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-1.9.0\features.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-1.9.0\forwards.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-1.9.0\json.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-1.9.0\json_tool.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-1.9.0\reader.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-1.9.0\value.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-1.9.0\version.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-1.9.0\writer.h">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib1.2.11\crc32.h">
+      <Filter>zlib1.2.11</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib1.2.11\deflate.h">
+      <Filter>zlib1.2.11</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib1.2.11\gzguts.h">
+      <Filter>zlib1.2.11</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib1.2.11\inffast.h">
+      <Filter>zlib1.2.11</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib1.2.11\inffixed.h">
+      <Filter>zlib1.2.11</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib1.2.11\inflate.h">
+      <Filter>zlib1.2.11</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib1.2.11\inftrees.h">
+      <Filter>zlib1.2.11</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib1.2.11\trees.h">
+      <Filter>zlib1.2.11</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib1.2.11\zconf.h">
+      <Filter>zlib1.2.11</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib1.2.11\zlib.h">
+      <Filter>zlib1.2.11</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib1.2.11\zutil.h">
+      <Filter>zlib1.2.11</Filter>
+    </ClInclude>
+    <ClInclude Include="tasks\Msg.h">
+      <Filter>tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="tasks\NetWorker.h">
+      <Filter>tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\EncodeUtil.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\IULog.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\stdafx.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Zlib.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jsoncpp-1.9.0\json_valueiterator.inl">
+      <Filter>jsoncpp-1.9.0</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="zlib1.2.11\文件概览.txt">
+      <Filter>zlib1.2.11</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

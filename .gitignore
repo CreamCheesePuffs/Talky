@@ -1,0 +1,45 @@
+# Visual Studio
+.vs/
+*.VC.db
+*.VC.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build
+x64/
+x86/
+Debug/
+Release/
+build/
+Build/
+out/
+TalkyClient/
+
+# Qt
+GeneratedFiles/
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+compile_commands.json
+
+# Logs
+*.log
+
+# Temporary
+*.tmp
+*.temp
+
+# OS
+.DS_Store
+Thumbs.db

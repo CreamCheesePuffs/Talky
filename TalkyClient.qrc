@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imgs/add.svg</file>
+        <file>imgs/chat.svg</file>
+        <file>imgs/chat_push.svg</file>
+        <file>imgs/close.svg</file>
+        <file>imgs/contact.svg</file>
+        <file>imgs/contact_push.svg</file>
+        <file>imgs/hk_quit.svg</file>
+    </qresource>
+</RCC>
