@@ -106,7 +106,7 @@
     <ClCompile Include="ui\ChatItem.cpp" />
     <ClCompile Include="ui\Login.cpp" />
     <ClCompile Include="ui\MainWindow.cpp" />
-    <ClCompile Include="ui\MessageBubbleWidget.cpp" />
+    <ClCompile Include="ui\MessageBubble.cpp" />
     <ClCompile Include="ui\Signin.cpp" />
     <ClCompile Include="utils\EncodeUtil.cc" />
     <ClCompile Include="utils\IULog.cc" />
@@ -140,7 +140,7 @@
     <QtMoc Include="ui\MainWindow.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="ui\MessageBubbleWidget.h" />
+    <QtMoc Include="ui\MessageBubble.h" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="ui\Signin.h" />
@@ -167,6 +167,7 @@
     <ClInclude Include="tasks\Msg.h" />
     <ClInclude Include="tasks\NetWorker.h" />
     <QtMoc Include="tasks\TalkyClient.h" />
+    <ClInclude Include="ui\DragWidgetFilter.h" />
     <ClInclude Include="utils\EncodeUtil.h" />
     <ClInclude Include="utils\IULog.h" />
     <ClInclude Include="utils\stdafx.h" />

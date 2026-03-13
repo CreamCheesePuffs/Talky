@@ -1,11 +1,12 @@
-﻿#include "ui/Login.h"
+﻿#include "tasks/TalkyClient.h"
 #include <QtWidgets/QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    Login login;
-    login.show();
+    
+    TalkyClient talkyClient;
+    talkyClient.launch();
 
     return app.exec();
 }

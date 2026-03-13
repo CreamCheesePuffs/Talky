@@ -1,9 +1,9 @@
-#include "MessageBubbleWidget.h"
+﻿#include "MessageBubble.h"
 #include <QLabel>
 #include <QHBoxLayout>
 #include <QFontMetrics>
 
-MessageBubbleWidget::MessageBubbleWidget(const QString& text, bool outgoing, QWidget* parent)
+MessageBubble::MessageBubble(const QString& text, bool outgoing, QWidget* parent)
     : QWidget(parent), _outgoing(outgoing)
 {
     setAttribute(Qt::WA_StyledBackground, true);
@@ -54,7 +54,7 @@ MessageBubbleWidget::MessageBubbleWidget(const QString& text, bool outgoing, QWi
     _textLabel->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
 }
 
-int MessageBubbleWidget::preferredHeight(int maxWidth) const
+int MessageBubble::preferredHeight(int maxWidth) const
 {
     // 让气泡宽度别太宽（否则像一整条横幅）
     int bubbleMax = qMax(120, maxWidth * 60 / 100); // 60% 列表宽

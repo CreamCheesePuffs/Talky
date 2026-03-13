@@ -153,7 +153,17 @@ QPushButton#register_pushButton {
        </layout>
       </item>
       <item>
-       <widget class="QLineEdit" name="userid_lineEdit">
+       <widget class="QLineEdit" name="username_lineEdit">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>45</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="nickname_lineEdit">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -164,16 +174,6 @@ QPushButton#register_pushButton {
       </item>
       <item>
        <widget class="QLineEdit" name="password_lineEdit">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>45</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="confirm_password_lineEdit">
         <property name="minimumSize">
          <size>
           <width>0</width>

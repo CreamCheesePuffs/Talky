@@ -11,8 +11,15 @@ public:
     Signin(QWidget *parent = nullptr);
     ~Signin();
 
+    void setSubmitting(bool submitting);
+
+signals:
+    void closeRequested();
+    void registerSubmitted(const QString& username, const QString& nickname, const QString& password);
+
 private:
     void on_close_toolButton_clicked();
+    void on_register_pushButton_clicked();
 
     Ui::SigninClass ui;
 };

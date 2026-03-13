@@ -1,6 +1,6 @@
 ﻿#include "MainWindow.h"
 #include "ChatItem.h"
-#include "MessageBubbleWidget.h"
+#include "MessageBubble.h"
 #include <QDebug>
 
 QVector<ChatSummary> mocks = {
@@ -142,7 +142,7 @@ void MainWindow::onSendClicked()
 void MainWindow::addBubble(const QString& text, bool outgoing)
 {
     auto* item = new QListWidgetItem();
-    auto* bubble = new MessageBubbleWidget(text, outgoing);
+    auto* bubble = new MessageBubble(text, outgoing);
 
     // 关键：先给一个合理的最大宽度（决定换行）
     int w = ui.messageList->viewport()->width();

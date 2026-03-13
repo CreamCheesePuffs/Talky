@@ -1,6 +1,8 @@
 ﻿#include "Login.h"
+#include "DragWidgetFilter.h"
 #include "MainWindow.h"
 #include "Signin.h"
+#include <QMessageBox>
 
 Login::Login(QWidget *parent)
     : QWidget(parent)
@@ -8,6 +10,7 @@ Login::Login(QWidget *parent)
     ui.setupUi(this);
 
     setWindowFlag(Qt::FramelessWindowHint);
+    this->installEventFilter(new DragWidgetFilter(this));
 
     //ui.close_toolButton->setCursor(Qt::PointingHandCursor);
     ui.register_pushButton->setCursor(Qt::PointingHandCursor);
@@ -15,15 +18,23 @@ Login::Login(QWidget *parent)
     connect(ui.close_toolButton, &QToolButton::clicked,
         this, &Login::on_close_toolButton_clicked);
 
-    connect(ui.register_pushButton, &QToolButton::clicked,
+    connect(ui.register_pushButton, &QPushButton::clicked,
         this, &Login::on_register_pushButton_clicked);
 
-    connect(ui.login_pushButton, &QToolButton::clicked,
+    connect(ui.login_pushButton, &QPushButton::clicked,
         this, &Login::on_login_pushButton_clicked);
 }
 
 Login::~Login()
 {}
+
+void Login::setSubmitting(bool submitting)
+{
+    ui.login_pushButton->setEnabled(!submitting);
+    ui.register_pushButton->setEnabled(!submitting);
+    ui.username_lineEdit->setEnabled(!submitting);
+    ui.password_lineEdit->setEnabled(!submitting);
+}
 
 void Login::on_close_toolButton_clicked()
 {
@@ -33,14 +44,18 @@ void Login::on_close_toolButton_clicked()
 
 void Login::on_register_pushButton_clicked()
 {
-    Signin* regWindow = new Signin();
-    regWindow->setAttribute(Qt::WA_DeleteOnClose); // 关闭自动释放
-    regWindow->show();
+    emit registerRequested();
 }
 
 void Login::on_login_pushButton_clicked()
 {
-    MainWindow* mainWindow = new MainWindow();
-    mainWindow->setAttribute(Qt::WA_DeleteOnClose); // 关闭自动释放
-    mainWindow->show();
+    const QString username = ui.username_lineEdit->text().trimmed();
+    const QString password = ui.password_lineEdit->text();
+
+    if (username.isEmpty() || password.isEmpty())
+    {
+        QMessageBox::warning(this, QStringLiteral("提示"), QStringLiteral("用户名和密码不能为空"));
+        return;
+    }
+    emit loginRequested(username, password, 1);
 }

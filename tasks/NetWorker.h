@@ -1,4 +1,4 @@
-// NetWorker.h
+﻿// NetWorker.h
 #pragma once
 
 #include "Msg.h"

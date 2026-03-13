@@ -52,7 +52,7 @@
     <ClCompile Include="ui\MainWindow.cpp">
       <Filter>ui</Filter>
     </ClCompile>
-    <ClCompile Include="ui\MessageBubbleWidget.cpp">
+    <ClCompile Include="ui\MessageBubble.cpp">
       <Filter>ui</Filter>
     </ClCompile>
     <ClCompile Include="ui\Signin.cpp">
@@ -147,7 +147,7 @@
     <QtMoc Include="ui\MainWindow.h">
       <Filter>ui</Filter>
     </QtMoc>
-    <QtMoc Include="ui\MessageBubbleWidget.h">
+    <QtMoc Include="ui\MessageBubble.h">
       <Filter>ui</Filter>
     </QtMoc>
     <QtMoc Include="ui\Signin.h">
@@ -258,6 +258,9 @@
     </ClInclude>
     <ClInclude Include="utils\Zlib.h">
       <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\DragWidgetFilter.h">
+      <Filter>ui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
